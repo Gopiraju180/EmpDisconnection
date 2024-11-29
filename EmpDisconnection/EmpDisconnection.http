@@ -1,0 +1,6 @@
+@EmpDisconnection_HostAddress = http://localhost:5026
+
+GET {{EmpDisconnection_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
