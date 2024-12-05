@@ -1,3 +1,5 @@
+using EmpDisconnection;
+using EmpDisconnection.Data;
 using EmpDisconnection.Interface;
 using EmpDisconnection.Repositories;
 using EmpDisconnection.Services;
@@ -10,6 +12,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddScoped<IEmployeeRepositorie, EmployeeRepositories>();//your interfaces and implemented classes
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();//your interfaces and implemented classes
+
+builder.Services.AddSingleton<IConnectionFactory,ConnectionFactory>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
